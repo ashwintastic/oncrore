@@ -1,5 +1,5 @@
 import 'babel-polyfill';
-import {MONGO_CONFIG} from './config/mongoConnectConfig'
+import {MONGOLAB_URI} from './config/mongoConnectConfig'
 const express    = require('express');
 const mongoose   = require('mongoose');
 const bodyParser = require('body-parser');
@@ -8,7 +8,7 @@ const port       = process.env.PORT || 5000;
 const routes    = require('./routes/');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(MONGO_CONFIG, {
+mongoose.connect(MONGOLAB_URI, {
     useMongoClient: true
     /* other options */
 });
