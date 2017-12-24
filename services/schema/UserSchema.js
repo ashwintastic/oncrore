@@ -1,5 +1,12 @@
 import mongoose, { Schema } from 'mongoose';
-import AuthProvider from './authProvider';
+//import AuthProvider from './authProvider';
+
+
+const AuthProvider = new Schema({
+    type: String,
+    uid: String
+});
+
 
 const UserSchema = new Schema({
     firstName: { type: String, required: true },
