@@ -8,7 +8,7 @@ const port       = process.env.PORT || 5000;
 const routes    = require('./routes/');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(PROD_MONGODB, {
+mongoose.connect(MONGO_CONFIG, {
     useMongoClient: true
     /* other options */
 });
